@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginTop="8dp"
@@ -18,11 +19,6 @@
         android:orientation="horizontal"
         android:padding="4dp">
 
-        <com.lelloman.identicon.view.GithubIdenticonView
-            android:id="@+id/wallet_identicon"
-            android:layout_width="48dp"
-            android:layout_height="48dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,17 +27,17 @@
             android:layout_marginRight="8dp">
 
             <TextView
-                android:id="@+id/wallet_name"
+                android:id="@+id/item_tx_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/wallet_name"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/wallet_status"
+                android:id="@+id/item_tx_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tools:text="txid: TEST TEST TEST"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2020 BDK Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_wallet_list">
+
+    <fragment
+        android:id="@+id/navigation_wallet_list"
+        android:name="org.magicalbitcoin.androidapp.wallet.WalletListFragment"
+        tools:layout="@layout/fragment_wallet_list">
+        <action
+            android:id="@+id/action_wallet_list_to_setup"
+            app:destination="@id/navigation_setup" />
+        <action
+            android:id="@+id/action_wallet_list_to_wallet"
+            app:destination="@id/navigation_wallet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_wallet"
+        android:name="org.magicalbitcoin.androidapp.wallet.WalletFragment"
+        tools:layout="@layout/fragment_wallet">
+        <action
+            android:id="@+id/action_wallet_to_setup"
+            app:destination="@id/navigation_setup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_receive"
+        android:name="org.magicalbitcoin.androidapp.wallet.WalletReceiveFragment"
+        tools:layout="@layout/fragment_wallet_receive" />
+
+    <fragment
+        android:id="@+id/navigation_send"
+        android:name="org.magicalbitcoin.androidapp.SendFragment"
+        tools:layout="@layout/fragment_wallet_send" />
+
+    <fragment
+        android:id="@+id/navigation_setup"
+        android:name="org.magicalbitcoin.androidapp.wallet.SettingsFragment"
+        tools:layout="@layout/fragment_wallet_settings">
+        <argument
+            android:name="isNew"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_wallet_setup_to_key"
+            app:destination="@id/navigation_key" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_key_list"
+        android:name="org.magicalbitcoin.androidapp.key.KeyListFragment"
+        tools:layout="@layout/fragment_key_list">
+        <action
+            android:id="@+id/action_key_list_to_key"
+            app:destination="@id/navigation_key" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_key"
+        android:name="org.magicalbitcoin.androidapp.key.KeyFragment"
+        tools:layout="@layout/fragment_key">
+        <argument
+            android:name="isNew"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+</navigation>
