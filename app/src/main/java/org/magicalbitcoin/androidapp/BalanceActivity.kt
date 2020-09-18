@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_balance.*
 import org.jetbrains.anko.doAsync
-import org.magicalbitcoin.wallet.Lib
-import org.magicalbitcoin.wallet.Types.WalletConstructor
-import org.magicalbitcoin.wallet.Types.WalletPtr
+import org.bitcoindevkit.library.Lib
+import org.bitcoindevkit.library.Types.WalletConstructor
+import org.bitcoindevkit.library.Types.WalletPtr
 import java.text.NumberFormat
 
 class BalanceActivity : AppCompatActivity() {

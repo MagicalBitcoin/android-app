@@ -5,7 +5,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.2'
@@ -21,6 +20,9 @@ allprojects {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
+
+        // temporary fix until bdk-jni.aar is published to a public repository
+        mavenLocal()
     }
 }
 

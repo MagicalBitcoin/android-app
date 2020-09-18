@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lelloman.identicon.view.GithubIdenticonView
 import kotlinx.android.synthetic.main.activity_wallets.*
-import org.magicalbitcoin.wallet.Types.WalletConstructor
+import org.bitcoindevkit.library.Types.Network
+import org.bitcoindevkit.library.Types.WalletConstructor
 import kotlin.collections.ArrayList
 import kotlin.collections.HashSet
 
@@ -112,12 +113,12 @@ class WalletsActivity : AppCompatActivity(), WalletsAdapter.WalletGesture {
         return names?.map {
             val pref = getSharedPreferences(it, Context.MODE_PRIVATE)
             WalletConstructor(pref.getString("name", "").toString(),
-                org.magicalbitcoin.wallet.Types.Network.testnet,
+                Network.testnet,
                 pref.getString("path", filesDir.toString()).toString(),
                 pref.getString("descriptor", "").toString(),
                 pref.getString("change_descriptor", null),
                 pref.getString("url", "").toString(),
-                null, null
+                null
             )
         }
     }

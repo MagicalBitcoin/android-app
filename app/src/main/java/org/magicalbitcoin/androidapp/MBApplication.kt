@@ -1,7 +1,7 @@
 package org.magicalbitcoin.androidapp
 
 import android.app.Application
-import org.magicalbitcoin.wallet.Lib
+import org.bitcoindevkit.library.Lib
 
 class MBApplication : Application() {
     companion object {
