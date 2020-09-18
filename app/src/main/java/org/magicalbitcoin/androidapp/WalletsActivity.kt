@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lelloman.identicon.view.GithubIdenticonView
 import kotlinx.android.synthetic.main.activity_wallets.*
-import org.bitcoindevkit.library.Types.Network
-import org.bitcoindevkit.library.Types.WalletConstructor
+import org.bitcoindevkit.bdkjni.Types.Network
+import org.bitcoindevkit.bdkjni.Types.WalletConstructor
 import kotlin.collections.ArrayList
 import kotlin.collections.HashSet
 
